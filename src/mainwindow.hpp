@@ -21,6 +21,10 @@ private:
     void _createConnects();
 
 private slots:
+    //File action events
+    void _onNewFileActionClicked();
+
+    //Paintbutton events
     void _onBrushButtonClicked();
     void _onEraserButtonClicked();
     void _onFillButtonClicked();

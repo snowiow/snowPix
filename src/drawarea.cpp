@@ -7,10 +7,11 @@ DrawArea::DrawArea(QWidget *parent) : QWidget(parent), ui(new Ui::DrawArea) {
     setAttribute(Qt::WA_StaticContents);
 
     _scribbling = false;
-    _pen = QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap,Qt::RoundJoin);
-    _image = QImage(64, 64, QImage::Format_RGB32);
-    _image.fill(Qt::blue);
+    _pen = QPen(Qt::black, 20, Qt::SolidLine,
+                Qt::SquareCap,Qt::BevelJoin);
 
+    _image = new QImage(64, 64, QImage::Format_RGB32);
+    _image->fill(Qt::blue);
 }
 
 DrawArea::~DrawArea() {
@@ -37,25 +38,16 @@ void DrawArea::mouseReleaseEvent(QMouseEvent *event) {
 }
 
 void DrawArea::paintEvent(QPaintEvent *event) {
+    QStyleOption opt;
+    opt.init(this);
     QPainter painter(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &painter, this);
     QRect rect = event->rect();
-    painter.drawImage(rect, _image, rect);
-}
-
-void DrawArea::resizeEvent(QResizeEvent *event) {
-    if (width() > _image.width()
-            || height() > _image.height()
-            ) {
-        int newWidth = qMax(width() + 128, _image.width());
-        int newHeight = qMax(height() + 128, _image.height());
-        _resizeImage(&_image, QSize(newWidth, newHeight));
-        update();
-    }
-    QWidget::resizeEvent(event);
+    painter.drawImage(rect, *_image, rect);
 }
 
 void DrawArea::_drawLineTo(const QPoint &endPoint) {
-    QPainter painter(&_image);
+    QPainter painter(_image);
     painter.setPen(_pen);
     painter.drawLine(_lastPoint, endPoint);
 
@@ -65,14 +57,4 @@ void DrawArea::_drawLineTo(const QPoint &endPoint) {
            adjusted(-rad, -rad, +rad, +rad));
 
     _lastPoint = endPoint;
-}
-
-void DrawArea::_resizeImage(QImage *image, const QSize &size) {
-    if (image->size() == size)
-        return;
-    QImage newImage(size, QImage::Format_RGB32);
-    newImage.fill(qRgb(255, 255, 255));
-    QPainter painter(&newImage);
-    painter.drawImage(QPoint(0, 0), _image);
-    *image = newImage;
 }

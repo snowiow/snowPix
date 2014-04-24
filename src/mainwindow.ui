@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>snowPix</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QWidget" name="layoutWidget">
@@ -225,15 +225,44 @@
         <attribute name="title">
          <string>tab1</string>
         </attribute>
-        <widget class="DrawArea" name="widget_2" native="true">
+        <widget class="QScrollArea" name="scrollArea">
          <property name="geometry">
           <rect>
-           <x>0</x>
-           <y>10</y>
+           <x>-1</x>
+           <y>-1</y>
            <width>601</width>
-           <height>231</height>
+           <height>251</height>
           </rect>
          </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaContent">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>599</width>
+            <height>249</height>
+           </rect>
+          </property>
+          <widget class="DrawArea" name="drawArea" native="true">
+           <property name="geometry">
+            <rect>
+             <x>-1</x>
+             <y>-1</y>
+             <width>601</width>
+             <height>251</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+          </widget>
+         </widget>
         </widget>
        </widget>
       </widget>
@@ -254,7 +283,7 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionNew_File"/>
+    <addaction name="actionNewFile"/>
     <addaction name="actionOpen_File"/>
     <addaction name="separator"/>
     <addaction name="actionSave_File"/>
@@ -292,7 +321,7 @@
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionNew_File">
+  <action name="actionNewFile">
    <property name="icon">
     <iconset resource="../data/data.qrc">
      <normaloff>:/pics/Document-Empty.png</normaloff>:/pics/Document-Empty.png</iconset>

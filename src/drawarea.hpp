@@ -30,20 +30,17 @@ class DrawArea : public QWidget
         void mouseMoveEvent(QMouseEvent* event);
         void mouseReleaseEvent(QMouseEvent* event);
         void paintEvent(QPaintEvent* event);
-        void resizeEvent(QResizeEvent* event);
 
     private:
-
         Ui::DrawArea *ui;
 
         QPoint _lastPoint;
         QPen _pen;
         bool _scribbling;
 
-        QImage _image;
+        QImage *_image;
 
         void _drawLineTo(const QPoint& endPoint);
-        void _resizeImage(QImage* image, const QSize& size);
 };
 
 #endif // DRAWAREA_H

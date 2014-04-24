@@ -15,13 +15,16 @@ TEMPLATE = app
 SOURCES += src/drawarea.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
+    src/newfiledialog.cpp
 
 HEADERS += \
     src/drawarea.hpp \
-    src/mainwindow.hpp
+    src/mainwindow.hpp \
+    src/newfiledialog.hpp
 
 FORMS += src/drawarea.ui \
-    src/mainwindow.ui
+    src/mainwindow.ui \
+    src/newfiledialog.ui
 
 QMAKE_CXXFLAGS += -std=c++11
 

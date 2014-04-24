@@ -1,5 +1,6 @@
 #include "mainwindow.hpp"
 #include "ui_mainwindow.h"
+#include "newfiledialog.hpp"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
     _ui(new Ui::MainWindow) {
@@ -13,7 +14,9 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::_createConnects() {
-
+    //File Actions
+    connect(_ui->actionNewFile, SIGNAL(triggered()), this,
+            SLOT(_onNewFileActionClicked()));
     //Draw Tool Buttons
     connect(_ui->brushButton,SIGNAL(clicked()), this,
             SLOT(_onBrushButtonClicked()));
@@ -27,6 +30,11 @@ void MainWindow::_createConnects() {
             SLOT(_onRectButtonClicked()));
     connect(_ui->circleButton,SIGNAL(clicked()), this,
             SLOT(_onCircleButtonClicked()));
+}
+
+void MainWindow::_onNewFileActionClicked() {
+    NewFileDialog *dlg = new NewFileDialog();
+    dlg->show();
 }
 
 void MainWindow::_onBrushButtonClicked() {
