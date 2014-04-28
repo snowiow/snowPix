@@ -29,3 +29,6 @@ Makefile*
 
 #build folder
 /build
+
+#executable
+snowPix

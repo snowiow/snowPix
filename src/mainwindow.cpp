@@ -3,14 +3,13 @@
 #include "newfiledialog.hpp"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
-    _ui(new Ui::MainWindow) {
-
+_ui(new Ui::MainWindow) {
     _ui->setupUi(this);
     _createConnects();
 }
 
 MainWindow::~MainWindow() {
-    delete _ui;
+
 }
 
 void MainWindow::_createConnects() {
@@ -33,36 +32,11 @@ void MainWindow::_createConnects() {
 }
 
 void MainWindow::_onNewFileActionClicked() {
-    NewFileDialog *dlg = new NewFileDialog();
-    dlg->show();
-}
-
-void MainWindow::_onBrushButtonClicked() {
-    QCursor cursor = QCursor(QPixmap(":pics/brushCursor"));
-    setCursor(cursor);
-}
-
-void MainWindow::_onEraserButtonClicked() {
-    QCursor cursor = QCursor(QPixmap(":pics/eraserCursor"));
-    setCursor(cursor);
-}
-
-void MainWindow::_onFillButtonClicked() {
-    QCursor cursor = QCursor(QPixmap(":pics/fillCursor"));
-    setCursor(cursor);
-}
-
-void MainWindow::_onLineButtonClicked() {
-    QCursor cursor = QCursor(QPixmap(":pics/lineCursor"));
-    setCursor(cursor);
-}
-
-void MainWindow::_onRectButtonClicked() {
-    QCursor cursor = QCursor(QPixmap(":pics/lineCursor"));
-    setCursor(cursor);
-}
-
-void MainWindow::_onCircleButtonClicked() {
-    QCursor cursor = QCursor(QPixmap(":pics/lineCursor"));
-    setCursor(cursor);
+    NewFileDialogResult result;
+    NewFileDialog dlg(result);
+    if (dlg.exec() && dlg.result() == QDialog::Accepted) {
+       _ui->drawArea->image.reset(new QImage(result.size.x(),
+                                  result.size.y(), QImage::Format_RGB32));
+       _ui->drawArea->image->fill(Qt::white);
+   }
 }

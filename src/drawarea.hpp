@@ -1,12 +1,12 @@
 #ifndef DRAWAREA_H
 #define DRAWAREA_H
 
+#include <memory>
 #include <QWidget>
 #include <QPen>
 #include <QPaintEvent>
 #include <QPainter>
 #include <QMouseEvent>
-#include <memory>
 
 namespace Ui {
     class DrawArea;
@@ -18,9 +18,10 @@ class DrawArea : public QWidget
 
     public:
         bool modified;
+         std::unique_ptr<QImage> image;
 
         DrawArea(QWidget *parent = nullptr);
-        ~DrawArea();
+        virtual ~DrawArea();
 
         bool openImage(const QString &fileName);
         bool saveImage(const QString & fileName, const char* fileFormat);
@@ -32,13 +33,11 @@ class DrawArea : public QWidget
         void paintEvent(QPaintEvent* event);
 
     private:
-        Ui::DrawArea *ui;
+        std::unique_ptr<Ui::DrawArea> ui;
 
         QPoint _lastPoint;
         QPen _pen;
         bool _scribbling;
-
-        QImage *_image;
 
         void _drawLineTo(const QPoint& endPoint);
 };

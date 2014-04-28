@@ -1,7 +1,7 @@
 #include "drawarea.hpp"
 #include "ui_drawarea.h"
 
-DrawArea::DrawArea(QWidget *parent) : QWidget(parent), ui(new Ui::DrawArea) {
+DrawArea::DrawArea(QWidget *parent) : QWidget(parent), ui(new Ui::DrawArea), image(new QImage(64, 64, QImage::Format_RGB32)) {
     ui->setupUi(this);
 
     setAttribute(Qt::WA_StaticContents);
@@ -10,12 +10,11 @@ DrawArea::DrawArea(QWidget *parent) : QWidget(parent), ui(new Ui::DrawArea) {
     _pen = QPen(Qt::black, 20, Qt::SolidLine,
                 Qt::SquareCap,Qt::BevelJoin);
 
-    _image = new QImage(64, 64, QImage::Format_RGB32);
-    _image->fill(Qt::blue);
+    image->fill(Qt::white);
 }
 
 DrawArea::~DrawArea() {
-    delete ui;
+
 }
 
 void DrawArea::mousePressEvent(QMouseEvent* event) {
@@ -43,11 +42,11 @@ void DrawArea::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &painter, this);
     QRect rect = event->rect();
-    painter.drawImage(rect, *_image, rect);
+    painter.drawImage(rect, *image, rect);
 }
 
 void DrawArea::_drawLineTo(const QPoint &endPoint) {
-    QPainter painter(_image);
+    QPainter painter(image.get());
     painter.setPen(_pen);
     painter.drawLine(_lastPoint, endPoint);
 

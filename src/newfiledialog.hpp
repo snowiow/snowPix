@@ -2,9 +2,12 @@
 #define NEWFILEDIALOG_HPP
 
 #include <QDialog>
+#include <QListWidgetItem>
+
+#include "newfiledialogresult.hpp"
 
 namespace Ui {
-class NewFileDialog;
+    class NewFileDialog;
 }
 
 class NewFileDialog : public QDialog
@@ -12,11 +15,16 @@ class NewFileDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit NewFileDialog(QWidget *parent = 0);
+    explicit NewFileDialog(NewFileDialogResult& result, QWidget *parent = nullptr);
     ~NewFileDialog();
 
+private slots:
+    void _onSizeChanged();
+
 private:
-    Ui::NewFileDialog *ui;
+    std::unique_ptr<Ui::NewFileDialog> _ui;
+    void _createConnects();
+    NewFileDialogResult& _result;
 };
 
 #endif // NEWFILEDIALOG_HPP

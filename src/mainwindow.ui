@@ -447,7 +447,7 @@
   <customwidget>
    <class>DrawArea</class>
    <extends>QWidget</extends>
-   <header>drawarea.h</header>
+   <header>src/drawarea.hpp</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
