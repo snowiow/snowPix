@@ -31,3 +31,11 @@ FORMS += src/drawarea.ui \
 QMAKE_CXXFLAGS += -std=c++11
 
 RESOURCES += data/data.qrc
+
+release: DESTDIR = build/release
+debug:   DESTDIR = build/debug
+
+OBJECTS_DIR = $$DESTDIR/.obj
+MOC_DIR = $$DESTDIR/.moc
+RCC_DIR = $$DESTDIR/.qrc
+UI_DIR = $$DESTDIR/.ui

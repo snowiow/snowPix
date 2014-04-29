@@ -1,0 +1,31 @@
+{
+	"folders":
+	[
+        {
+            "path": ".",
+            "folder_exclude_patterns": ["build"],
+            "file_exclude_patterns": ["snowPix", "LICENSE", "Makefile"]
+        }
+	],
+    "build_systems":
+    [
+        {
+            "name": "QtDebug",
+            "shell_cmd": "qmake && make && ./build/debug/${project_base_name}",
+            "working_dir": "${project_path:${folder}}",
+
+            "variants":
+            [
+                {
+                    "name": "Qmake Project",
+                    "shell_cmd": "qmake -project"
+                },
+
+                {
+                    "name": "Qmake Clean",
+                    "shell_cmd": "make clean"
+                }
+            ]
+        }
+    ]
+}
