@@ -29,23 +29,27 @@
 			]
 		]
 	},
-	"build_system": "Packages/User/Build/c++/qt.sublime-build",
+	"build_system": "QtDebug",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 186.0,
 		"selected_items":
 		[
-			[
-				"k",
-				"Preferences: Key Bindings - Default"
-			],
 			[
 				"key",
 				"Preferences: Key Bindings - User"
 			],
 			[
+				"sett",
+				"Preferences: Settings - User"
+			],
+			[
 				"setting",
-				"Preferences: SublimeLinter Settings – User"
+				"Preferences: Settings - User"
+			],
+			[
+				"k",
+				"Preferences: Key Bindings - Default"
 			],
 			[
 				"keybin",
@@ -101,15 +105,17 @@
 	},
 	"file_history":
 	[
+		"/home/marcel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/marcel/workspace/snowPix/src/mainwindow.cpp",
+		"/home/marcel/workspace/snowPix/src/drawarea.hpp",
+		"/home/marcel/workspace/snowPix/snowPix.sublime-project",
 		"/home/marcel/workspace/snowPix/snowPix.pro",
 		"/home/marcel/.config/sublime-text-3/Packages/User/Build/c++/qt.sublime-build",
 		"/home/marcel/workspace/snowPix/snowPix.pro.user",
 		"/home/marcel/workspace/snowPix/build/debug/.ui/ui_drawarea.h",
 		"/home/marcel/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/marcel/workspace/snowPix/src/drawarea.hpp",
 		"/home/marcel/workspace/snowPix/moc_mainwindow.cpp",
 		"/home/marcel/workspace/snowPix/src/main.cpp",
-		"/home/marcel/workspace/snowPix/src/mainwindow.cpp",
 		"/home/marcel/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/marcel/workspace/snowPix/src/drawarea.cpp",
 		"/home/marcel/workspace/snowPix/src/newfiledialogresult.hpp",
@@ -132,7 +138,6 @@
 		"/home/marcel/workspace/snowPix/moc_drawarea.cpp",
 		"/home/marcel/workspace/snowPix/ui_mainwindow.h",
 		"/home/marcel/workspace/snowPix/moc_mainwindow.o",
-		"/home/marcel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/marcel/.config/sublime-text-3/Packages/ClangComplete/Default.sublime-keymap",
 		"/home/marcel/.config/sublime-text-3/Packages/ClangComplete/ClangComplete.sublime-settings",
 		"/home/marcel/workspace/test.cpp",
@@ -144,7 +149,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -158,6 +163,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bool",
+			"paintEvent",
+			"bool",
+			", ",
+			");\n",
 			"ctrl+shift+k",
 			"delete_line",
 			"dele",
@@ -176,7 +186,7 @@
 		[
 			"image"
 		],
-		"reverse": false,
+		"reverse": true,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -184,7 +194,7 @@
 	},
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 37.0
 	},
 	"input":
 	{
@@ -219,7 +229,7 @@
 	},
 	"output.exec":
 	{
-		"height": 202.0
+		"height": 150.0
 	},
 	"output.find_results":
 	{
@@ -227,7 +237,7 @@
 	},
 	"replace":
 	{
-		"height": 64.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":

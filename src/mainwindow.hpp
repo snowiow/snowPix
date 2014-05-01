@@ -3,7 +3,9 @@
 
 #include <memory>
 #include <QMainWindow>
+
 #include "newfiledialogresult.hpp"
+#include "drawarea.hpp"
 
 namespace Ui {
 class MainWindow;

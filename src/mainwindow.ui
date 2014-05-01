@@ -6,276 +6,305 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>702</width>
-    <height>345</height>
+    <width>862</width>
+    <height>603</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>snowPix</string>
   </property>
-  <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>701</width>
-      <height>281</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="mainWindowLayout" rowstretch="0,0,0,0" columnstretch="0,0,0">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetDefaultConstraint</enum>
-     </property>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="fillButton">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="../data/data.qrc">
-         <normaloff>:/pics/Paintcan.png</normaloff>:/pics/Paintcan.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Ctrl+3</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QPushButton" name="circleButton">
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="../data/data.qrc">
-         <normaloff>:/pics/Select-Ellipse.png</normaloff>:/pics/Select-Ellipse.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Ctrl+6</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="brushButton">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="../data/data.qrc">
-         <normaloff>:/pics/Painbrush.png</normaloff>:/pics/Painbrush.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Ctrl+1</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="eraserButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="../data/data.qrc">
-         <normaloff>:/pics/Draw-Eraser.png</normaloff>:/pics/Draw-Eraser.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Ctrl+2</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QPushButton" name="rectButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="../data/data.qrc">
-         <normaloff>:/pics/Select-Restangular.png</normaloff>:/pics/Select-Restangular.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Ctrl+5</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QPushButton" name="lineButton">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="../data/data.qrc">
-         <normaloff>:/pics/Draw-Line.png</normaloff>:/pics/Draw-Line.png</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Ctrl+4</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-       <property name="flat">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QWidget" name="widget" native="true"/>
-     </item>
-     <item row="0" column="0" rowspan="4">
-      <widget class="QTabWidget" name="tabWidget">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>279</height>
-        </size>
-       </property>
-       <property name="baseSize">
-        <size>
-         <width>0</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="tabsClosable">
-        <bool>true</bool>
-       </property>
-       <property name="movable">
-        <bool>true</bool>
-       </property>
-       <widget class="QWidget" name="tab1">
-        <attribute name="title">
-         <string>tab1</string>
-        </attribute>
-        <widget class="QScrollArea" name="scrollArea">
+  <widget class="QWidget" name="mainLayout">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>10</horstretch>
+     <verstretch>10</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="6,1">
+    <item>
+     <layout class="QVBoxLayout" name="drawLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1000000</width>
+          <height>1000000</height>
+         </size>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <widget class="DrawArea" name="drawArea">
          <property name="geometry">
           <rect>
-           <x>-1</x>
-           <y>-1</y>
-           <width>601</width>
-           <height>251</height>
+           <x>0</x>
+           <y>0</y>
+           <width>669</width>
+           <height>522</height>
           </rect>
          </property>
-         <property name="widgetResizable">
-          <bool>true</bool>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
-         <widget class="QWidget" name="scrollAreaContent">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>599</width>
-            <height>249</height>
-           </rect>
-          </property>
-          <widget class="DrawArea" name="drawArea" native="true">
-           <property name="geometry">
-            <rect>
-             <x>-1</x>
-             <y>-1</y>
-             <width>601</width>
-             <height>251</height>
-            </rect>
-           </property>
-           <property name="autoFillBackground">
-            <bool>true</bool>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-          </widget>
-         </widget>
+         <property name="minimumSize">
+          <size>
+           <width>10</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>1000000</width>
+           <height>1000000</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout"/>
         </widget>
        </widget>
-      </widget>
-     </item>
-    </layout>
-   </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="toolLayout" stretch="1,1">
+      <item>
+       <widget class="QWidget" name="drawButtons" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="2" column="1">
+          <widget class="QPushButton" name="circleButton">
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../data/data.qrc">
+             <normaloff>:/pics/Select-Ellipse.png</normaloff>:/pics/Select-Ellipse.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+6</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="fillButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../data/data.qrc">
+             <normaloff>:/pics/Paintcan.png</normaloff>:/pics/Paintcan.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+3</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="eraserButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../data/data.qrc">
+             <normaloff>:/pics/Draw-Eraser.png</normaloff>:/pics/Draw-Eraser.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+2</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="rectButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../data/data.qrc">
+             <normaloff>:/pics/Select-Restangular.png</normaloff>:/pics/Select-Restangular.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+5</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="lineButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../data/data.qrc">
+             <normaloff>:/pics/Draw-Line.png</normaloff>:/pics/Draw-Line.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+4</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="brushButton">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../data/data.qrc">
+             <normaloff>:/pics/Painbrush.png</normaloff>:/pics/Painbrush.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+1</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+        <zorder>brushButton</zorder>
+        <zorder>eraserButton</zorder>
+        <zorder>lineButton</zorder>
+        <zorder>fillButton</zorder>
+        <zorder>rectButton</zorder>
+        <zorder>circleButton</zorder>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>702</width>
+     <width>862</width>
      <height>24</height>
     </rect>
    </property>

@@ -2,7 +2,7 @@
 #define DRAWAREA_H
 
 #include <memory>
-#include <QWidget>
+#include <QScrollArea>
 #include <QPen>
 #include <QPaintEvent>
 #include <QPainter>
@@ -17,29 +17,33 @@ class DrawArea : public QWidget
     Q_OBJECT
 
     public:
-        bool modified;
-         std::unique_ptr<QImage> image;
+        //member
+        int zoom;
 
-        DrawArea(QWidget *parent = nullptr);
+         //ctor and dtor
+        DrawArea(QWidget* parent = nullptr);
         virtual ~DrawArea();
 
-        bool openImage(const QString &fileName);
-        bool saveImage(const QString & fileName, const char* fileFormat);
+        //methods
+        void setImage(QImage* image);
+        // QSize sizeHint() const;
 
     protected:
+        //methods
         void mousePressEvent(QMouseEvent* event);
         void mouseMoveEvent(QMouseEvent* event);
-        void mouseReleaseEvent(QMouseEvent* event);
         void paintEvent(QPaintEvent* event);
 
     private:
+        //member
         std::unique_ptr<Ui::DrawArea> ui;
+        std::unique_ptr<QImage> _image;
+        std::unique_ptr<QPen> _pen;
 
-        QPoint _lastPoint;
-        QPen _pen;
-        bool _scribbling;
+        //methods
+        void _setImagePixel(const QPoint& pos, bool opaque);
+        QRect _pixelRect(int i, int j) const;
 
-        void _drawLineTo(const QPoint& endPoint);
 };
 
 #endif // DRAWAREA_H
