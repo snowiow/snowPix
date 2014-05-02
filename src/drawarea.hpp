@@ -2,7 +2,7 @@
 #define DRAWAREA_H
 
 #include <memory>
-#include <QScrollArea>
+#include <QWidget>
 #include <QPen>
 #include <QPaintEvent>
 #include <QPainter>
@@ -17,8 +17,6 @@ class DrawArea : public QWidget
     Q_OBJECT
 
     public:
-        //member
-        int zoom;
 
          //ctor and dtor
         DrawArea(QWidget* parent = nullptr);
@@ -26,7 +24,14 @@ class DrawArea : public QWidget
 
         //methods
         void setImage(QImage* image);
-        // QSize sizeHint() const;
+        void increaseZoom();
+        void decreaseZoom();
+        int getZoom() const {
+            return _zoom;
+        }
+
+    public slots:
+        void setZoom(int value);
 
     protected:
         //methods
@@ -36,13 +41,15 @@ class DrawArea : public QWidget
 
     private:
         //member
-        std::unique_ptr<Ui::DrawArea> ui;
+        int _zoom;
+        std::unique_ptr<Ui::DrawArea> _ui;
         std::unique_ptr<QImage> _image;
         std::unique_ptr<QPen> _pen;
 
         //methods
         void _setImagePixel(const QPoint& pos, bool opaque);
         QRect _pixelRect(int i, int j) const;
+        void _resize();
 
 };
 

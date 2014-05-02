@@ -5,7 +5,7 @@
 #include <QMainWindow>
 
 #include "newfiledialogresult.hpp"
-#include "drawarea.hpp"
+#include "drawcontents.hpp"
 
 namespace Ui {
 class MainWindow;

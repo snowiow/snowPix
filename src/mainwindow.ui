@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>862</width>
-    <height>603</height>
+    <width>819</width>
+    <height>607</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -32,70 +32,9 @@
      <verstretch>10</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout" stretch="6,1">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="7,1">
     <item>
-     <layout class="QVBoxLayout" name="drawLayout">
-      <property name="sizeConstraint">
-       <enum>QLayout::SetDefaultConstraint</enum>
-      </property>
-      <item>
-       <widget class="QScrollArea" name="scrollArea">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>10</width>
-          <height>10</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>1000000</width>
-          <height>1000000</height>
-         </size>
-        </property>
-        <property name="verticalScrollBarPolicy">
-         <enum>Qt::ScrollBarAsNeeded</enum>
-        </property>
-        <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAsNeeded</enum>
-        </property>
-        <widget class="DrawArea" name="drawArea">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>669</width>
-           <height>522</height>
-          </rect>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>10</width>
-           <height>10</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>1000000</width>
-           <height>1000000</height>
-          </size>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout"/>
-        </widget>
-       </widget>
-      </item>
-     </layout>
+     <widget class="DrawContents" name="drawContents" native="true"/>
     </item>
     <item>
      <layout class="QVBoxLayout" name="toolLayout" stretch="1,1">
@@ -304,7 +243,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>862</width>
+     <width>819</width>
      <height>24</height>
     </rect>
    </property>
@@ -474,9 +413,9 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>DrawArea</class>
+   <class>DrawContents</class>
    <extends>QWidget</extends>
-   <header>src/drawarea.hpp</header>
+   <header>src/drawcontents.hpp</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

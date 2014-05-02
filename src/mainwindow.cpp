@@ -17,17 +17,17 @@ void MainWindow::_createConnects() {
     connect(_ui->actionNewFile, SIGNAL(triggered()), this,
             SLOT(_onNewFileActionClicked()));
     //Draw Tool Buttons
-    connect(_ui->brushButton,SIGNAL(clicked()), this,
+    connect(_ui->brushButton, SIGNAL(clicked()), this,
             SLOT(_onBrushButtonClicked()));
-    connect(_ui->eraserButton,SIGNAL(clicked()), this,
+    connect(_ui->eraserButton, SIGNAL(clicked()), this,
             SLOT(_onEraserButtonClicked()));
-    connect(_ui->fillButton,SIGNAL(clicked()), this,
+    connect(_ui->fillButton, SIGNAL(clicked()), this,
             SLOT(_onFillButtonClicked()));
-    connect(_ui->lineButton,SIGNAL(clicked()), this,
+    connect(_ui->lineButton, SIGNAL(clicked()), this,
             SLOT(_onLineButtonClicked()));
-    connect(_ui->rectButton,SIGNAL(clicked()), this,
+    connect(_ui->rectButton, SIGNAL(clicked()), this,
             SLOT(_onRectButtonClicked()));
-    connect(_ui->circleButton,SIGNAL(clicked()), this,
+    connect(_ui->circleButton, SIGNAL(clicked()), this,
             SLOT(_onCircleButtonClicked()));
 }
 
@@ -35,7 +35,7 @@ void MainWindow::_onNewFileActionClicked() {
     NewFileDialogResult result;
     NewFileDialog dlg(result);
     if (dlg.exec() && dlg.result() == QDialog::Accepted) {
-       _ui->drawArea->setImage(new QImage(result.size.x(),
+       _ui->drawContents->setImage(new QImage(result.size.x(),
                                   result.size.y(), QImage::Format_RGB32));
    }
 }

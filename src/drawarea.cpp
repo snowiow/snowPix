@@ -1,14 +1,12 @@
 #include "drawarea.hpp"
 #include "ui_drawarea.h"
-#include <iostream>
 
 //ctor and dtor
-DrawArea::DrawArea(QWidget *parent) : QWidget(parent), ui(new Ui::DrawArea), _image(new QImage(64, 64, QImage::Format_RGB32)), _pen(new QPen(Qt::black, 1, Qt::SolidLine, Qt::SquareCap,Qt::BevelJoin))  {
-    ui->setupUi(this);
-
+DrawArea::DrawArea(QWidget *parent) : QWidget(parent), _ui(new Ui::DrawArea),  _pen(new QPen(Qt::black, 1, Qt::SolidLine, Qt::SquareCap,Qt::BevelJoin))  {
+    _ui->setupUi(this);
+    _zoom = 8;
     setAttribute(Qt::WA_StaticContents);
-    zoom = 8;
-    _image->fill(Qt::white);
+    setImage(new QImage(16, 16, QImage::Format_RGB32));
 }
 
 DrawArea::~DrawArea() {
@@ -19,7 +17,7 @@ DrawArea::~DrawArea() {
 void DrawArea::setImage(QImage* image) {
     _image.reset(image);
     _image->fill(Qt::white);
-    resize(_image->size().width() * zoom, image->size().height() * zoom);
+    _resize();
 }
 
 //protected methods
@@ -39,12 +37,12 @@ void DrawArea::mouseMoveEvent(QMouseEvent *event) {
 
 void DrawArea::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
-    if (zoom >= 3) {
+    if (_zoom >= 3) {
         painter.setPen(*_pen);
         for (int i = 0; i < _image->width(); i++)
-            painter.drawLine(zoom * i, 0, zoom * i, zoom * _image->height());
+            painter.drawLine(_zoom * i, 0, _zoom * i, _zoom * _image->height());
         for (int i = 0; i < _image->height(); i++)
-            painter.drawLine(0, zoom * i, zoom * _image->width(), zoom * i);
+            painter.drawLine(0, _zoom * i, _zoom * _image->width(), _zoom * i);
     }
     for (int i = 0; i < _image->width(); i++) {
         for (int j = 0; j < _image->height(); j++) {
@@ -57,14 +55,14 @@ void DrawArea::paintEvent(QPaintEvent *event) {
 
 //private methods
 QRect DrawArea::_pixelRect(int i, int j) const {
-    if (zoom >= 3)
-        return QRect(zoom * i + 1, zoom * j + 1, zoom - 1, zoom - 1);
-    return QRect(zoom * i, zoom * j, zoom, zoom);
+    if (_zoom >= 3)
+        return QRect(_zoom * i + 1, _zoom * j + 1, _zoom - 1, _zoom - 1);
+    return QRect(_zoom * i, _zoom * j, _zoom, _zoom);
 }
 
 void DrawArea::_setImagePixel(const QPoint& pos, bool opaque) {
-    int i = pos.x() / zoom;
-    int j = pos.y() / zoom;
+    int i = pos.x() / _zoom;
+    int j = pos.y() / _zoom;
     if (_image->rect().contains(i, j)) {
         if (opaque)
             _image->setPixel(i, j, _pen->color().rgb());
@@ -72,4 +70,17 @@ void DrawArea::_setImagePixel(const QPoint& pos, bool opaque) {
             _image->setPixel(i, j, Qt::white);
         update(_pixelRect(i, j));
     }
+}
+
+void DrawArea::setZoom(int value) {
+    if (value > 0 && value < 16) {
+        _zoom = value;
+        _resize();
+    }
+
+}
+
+void DrawArea::_resize() {
+    resize(_image->size().width() * _zoom, _image->size().height() * _zoom);
+    update();
 }

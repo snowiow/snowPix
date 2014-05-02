@@ -23,5 +23,7 @@
         <file>pics/fillCursor.png</file>
         <file>pics/lineCursor.png</file>
         <file>pics/eraserCursor.png</file>
+        <file>pics/Zoom-In.png</file>
+        <file>pics/Zoom-Out.png</file>
     </qresource>
 </RCC>

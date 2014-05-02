@@ -16,17 +16,20 @@ SOURCES += src/drawarea.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
     src/newfiledialog.cpp \
-    src/newfiledialogresult.cpp
+    src/newfiledialogresult.cpp \
+    src/drawcontents.cpp
 
 HEADERS += \
     src/drawarea.hpp \
     src/mainwindow.hpp \
     src/newfiledialog.hpp \
-    src/newfiledialogresult.hpp
+    src/newfiledialogresult.hpp \
+    src/drawcontents.hpp
 
 FORMS += src/drawarea.ui \
     src/mainwindow.ui \
-    src/newfiledialog.ui
+    src/newfiledialog.ui \
+    src/drawcontents.ui
 
 QMAKE_CXXFLAGS += -std=c++11
 
