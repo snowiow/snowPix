@@ -3,8 +3,12 @@
 
 #include <QDialog>
 #include <QListWidgetItem>
+#include <QColorDialog>
+#include <string>
 
 #include "newfiledialogresult.hpp"
+
+using std::to_string;
 
 namespace Ui {
     class NewFileDialog;
@@ -18,13 +22,15 @@ public:
     explicit NewFileDialog(NewFileDialogResult& result, QWidget *parent = nullptr);
     ~NewFileDialog();
 
-private slots:
-    void _onSizeChanged();
-
 private:
     std::unique_ptr<Ui::NewFileDialog> _ui;
-    void _createConnects();
     NewFileDialogResult& _result;
+
+    void _createConnects();
+
+private slots:
+    void _onSizeChanged();
+    void _onColorPickerClicked();
 };
 
 #endif // NEWFILEDIALOG_HPP

@@ -36,6 +36,6 @@ void MainWindow::_onNewFileActionClicked() {
     NewFileDialog dlg(result);
     if (dlg.exec() && dlg.result() == QDialog::Accepted) {
        _ui->drawContents->setImage(new QImage(result.size.x(),
-                                  result.size.y(), QImage::Format_RGB32));
+                                  result.size.y(), QImage::Format_RGB32), result.chosenColor);
    }
 }

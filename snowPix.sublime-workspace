@@ -32,20 +32,32 @@
 	"build_system": "QtDebug",
 	"command_palette":
 	{
-		"height": 186.0,
+		"height": 375.0,
 		"selected_items":
 		[
 			[
-				"key",
-				"Preferences: Key Bindings - User"
+				"user",
+				"Preferences: Settings - User"
 			],
 			[
 				"sett",
-				"Preferences: Settings - User"
+				"Preferences: Settings - Default"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
 			],
 			[
 				"setting",
 				"Preferences: Settings - User"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
 			],
 			[
 				"k",
@@ -58,14 +70,6 @@
 			[
 				"setiins",
 				"Preferences: SublimeLinter Settings – User"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"linter",
@@ -105,24 +109,43 @@
 	},
 	"file_history":
 	[
-		"/home/marcel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/marcel/workspace/snowPix/src/mainwindow.cpp",
-		"/home/marcel/workspace/snowPix/src/drawarea.hpp",
-		"/home/marcel/workspace/snowPix/snowPix.sublime-project",
-		"/home/marcel/workspace/snowPix/snowPix.pro",
-		"/home/marcel/.config/sublime-text-3/Packages/User/Build/c++/qt.sublime-build",
-		"/home/marcel/workspace/snowPix/snowPix.pro.user",
-		"/home/marcel/workspace/snowPix/build/debug/.ui/ui_drawarea.h",
-		"/home/marcel/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/marcel/workspace/snowPix/moc_mainwindow.cpp",
-		"/home/marcel/workspace/snowPix/src/main.cpp",
-		"/home/marcel/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/marcel/workspace/snowPix/src/drawarea.cpp",
-		"/home/marcel/workspace/snowPix/src/newfiledialogresult.hpp",
-		"/home/marcel/workspace/snowPix/src/newfiledialogresult.cpp",
+		"/home/marcel/workspace/snowPix/src/drawarea.hpp",
+		"/home/marcel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/marcel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/marcel/workspace/snowPix/src/drawarea.ui",
+		"/home/marcel/workspace/snowPix/src/drawcontents.hpp",
 		"/home/marcel/workspace/snowPix/src/newfiledialog.cpp",
-		"/home/marcel/workspace/snowPix/src/newfiledialog.ui",
+		"/home/marcel/workspace/snowPix/src/drawcontents.cpp",
+		"/home/marcel/workspace/snowPix/data/data.qrc",
+		"/home/marcel/workspace/snowPix/src/mainwindow.hpp",
+		"/home/marcel/workspace/snowPix/src/mainwindow.cpp",
 		"/home/marcel/workspace/snowPix/src/newfiledialog.hpp",
+		"/home/marcel/workspace/snowPix/src/newfiledialog.ui",
+		"/home/marcel/workspace/snowPix/src/newfiledialogresult.cpp",
+		"/home/marcel/workspace/snowPix/src/newfiledialogresult.hpp",
+		"/home/marcel/.config/sublime-text-3/Packages/User/ClangComplete.sublime-settings",
+		"/home/marcel/workspace/snowPix/src/zoomwidget.ui",
+		"/home/marcel/workspace/snowPix/src/zoomwidget.cpp",
+		"/home/marcel/workspace/snowPix/src/zoomwidget.hpp",
+		"/home/marcel/workspace/snowPix/src/mainwindow.ui",
+		"/home/marcel/workspace/snowPix/snowPix.pro",
+		"/home/marcel/Dokumente/elasticsearch.txt",
+		"/home/marcel/workspace/snowPix/build/debug/.ui/ui_mainwindow.h",
+		"/home/marcel/workspace/snowPix/src/main.cpp",
+		"/home/marcel/workspace/snowPix/README.md",
+		"/home/marcel/workspace/snowPix/snowPix.pro.user",
+		"/home/marcel/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/marcel/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/marcel/.config/sublime-text-3/Packages/User/Build/test.sublime-build",
+		"/home/marcel/workspace/euler/aufgabe3.cpp",
+		"/home/marcel/workspace/euler/aufgabe3.py",
+		"/home/marcel/workspace/aufgabe2.py",
+		"/usr/include/qt/QtGui/QWidgetList",
+		"/home/marcel/workspace/snowPix/snowPix.sublime-project",
+		"/home/marcel/.config/sublime-text-3/Packages/User/Build/c++/qt.sublime-build",
+		"/home/marcel/workspace/snowPix/build/debug/.ui/ui_drawarea.h",
+		"/home/marcel/workspace/snowPix/moc_mainwindow.cpp",
 		"/home/marcel/workspace/snowPix/snowPix",
 		"/home/marcel/workspace/snowPix/ui_drawarea.h",
 		"/home/marcel/workspace/snowPix/mainwindow.o",
@@ -133,7 +156,6 @@
 		"/home/marcel/workspace/snowPix/ui_newfiledialog.h",
 		"/home/marcel/workspace/snowPix/newfiledialogresult.o",
 		"/home/marcel/workspace/snowPix/main.o",
-		"/home/marcel/.config/sublime-text-3/Packages/User/ClangComplete.sublime-settings",
 		"/home/marcel/workspace/snowPix/drawarea.o",
 		"/home/marcel/workspace/snowPix/moc_drawarea.cpp",
 		"/home/marcel/workspace/snowPix/ui_mainwindow.h",
@@ -141,7 +163,6 @@
 		"/home/marcel/.config/sublime-text-3/Packages/ClangComplete/Default.sublime-keymap",
 		"/home/marcel/.config/sublime-text-3/Packages/ClangComplete/ClangComplete.sublime-settings",
 		"/home/marcel/workspace/test.cpp",
-		"/home/marcel/workspace/snowPix/src/mainwindow.ui",
 		"/home/marcel/.config/sublime-text-3/Packages/ClangComplete/complete/complete.cpp",
 		"/home/marcel/.config/sublime-text-3/Packages/ClangComplete/complete/complete.h",
 		"/home/marcel/workspace/monokai.xml",
@@ -149,7 +170,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -163,6 +184,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"initial",
+			"cout",
+			"minimap",
+			"zoom",
+			"ui",
+			"qrc",
+			"QScrollArea",
+			"rgba",
 			"bool",
 			"paintEvent",
 			"bool",
@@ -184,9 +213,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"_zoom",
 			"image"
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -229,7 +259,7 @@
 	},
 	"output.exec":
 	{
-		"height": 150.0
+		"height": 152.0
 	},
 	"output.find_results":
 	{
@@ -237,7 +267,7 @@
 	},
 	"replace":
 	{
-		"height": 50.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -245,6 +275,74 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"draw",
+				"src/drawarea.hpp"
+			],
+			[
+				"dra",
+				"src/drawarea.cpp"
+			],
+			[
+				"main",
+				"src/mainwindow.cpp"
+			],
+			[
+				"newfi",
+				"src/newfiledialog.hpp"
+			],
+			[
+				"new",
+				"src/newfiledialog.cpp"
+			],
+			[
+				"newfil",
+				"src/newfiledialog.ui"
+			],
+			[
+				"newf",
+				"src/newfiledialog.cpp"
+			],
+			[
+				"maon",
+				"src/mainwindow.cpp"
+			],
+			[
+				"ma",
+				"src/mainwindow.cpp"
+			],
+			[
+				"zoom",
+				"src/zoomwidget.cpp"
+			],
+			[
+				"main.c",
+				"src/mainwindow.cpp"
+			],
+			[
+				"zoo",
+				"src/zoomwidget.cpp"
+			],
+			[
+				"main.",
+				"src/mainwindow.hpp"
+			],
+			[
+				"dra.",
+				"src/drawarea.hpp"
+			],
+			[
+				"draw.c",
+				"src/drawarea.cpp"
+			],
+			[
+				"dr.c",
+				"src/drawarea.cpp"
+			],
+			[
+				"mainw",
+				"src/mainwindow.cpp"
+			],
 			[
 				"main.cpp",
 				"src/mainwindow.cpp"
@@ -258,20 +356,8 @@
 				"src/newfiledialog.ui"
 			],
 			[
-				"newfi",
-				"src/newfiledialog.hpp"
-			],
-			[
 				"filedi.ui",
 				"src/newfiledialog.ui"
-			],
-			[
-				"new",
-				"src/newfiledialog.cpp"
-			],
-			[
-				"newfil",
-				"src/newfiledialogresult.cpp"
 			],
 			[
 				"mainwi",
@@ -286,14 +372,6 @@
 				"src/newfiledialogresult.hpp"
 			],
 			[
-				"mainw",
-				"src/mainwindow.cpp"
-			],
-			[
-				"newf",
-				"src/newfiledialogresult.hpp"
-			],
-			[
 				"newfiled",
 				"src/newfiledialog.hpp"
 			],
@@ -302,15 +380,7 @@
 				"ui_newfiledialog.h"
 			],
 			[
-				"main",
-				"src/mainwindow.cpp"
-			],
-			[
 				"manwin",
-				"src/mainwindow.cpp"
-			],
-			[
-				"main.",
 				"src/mainwindow.cpp"
 			],
 			[
@@ -344,18 +414,6 @@
 			[
 				"newficpp",
 				"src/newfiledialog.cpp"
-			],
-			[
-				"ma",
-				"src/mainwindow.cpp"
-			],
-			[
-				"draw",
-				"src/drawarea.cpp"
-			],
-			[
-				"main.c",
-				"src/main.cpp"
 			]
 		],
 		"width": 0.0
@@ -370,16 +428,16 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 375.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 378.0
 	},
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
@@ -387,5 +445,6 @@
 	"status_bar_visible": true,
 	"template_settings":
 	{
+		"max_columns": 2
 	}
 }

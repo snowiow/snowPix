@@ -11,8 +11,8 @@ DrawContents::~DrawContents() {
 
 }
 
-void DrawContents::setImage(QImage* image) {
-    _ui->drawArea->setImage(image);
+void DrawContents::setImage(QImage* image, QColor color) {
+    _ui->drawArea->setImage(image, color);
 }
 
 void DrawContents::_createConnects() {

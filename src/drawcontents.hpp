@@ -13,12 +13,10 @@ class DrawContents : public QWidget
     Q_OBJECT
 
     public:
-
          //ctor and dtor
         DrawContents(QWidget* parent = nullptr);
         virtual ~DrawContents();
-        void setImage(QImage* image);
-
+        void setImage(QImage* image, QColor color = Qt::white);
 
     private:
         //member

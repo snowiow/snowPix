@@ -23,9 +23,7 @@ class DrawArea : public QWidget
         virtual ~DrawArea();
 
         //methods
-        void setImage(QImage* image);
-        void increaseZoom();
-        void decreaseZoom();
+        void setImage(QImage* image, QColor color = Qt::white);
         int getZoom() const {
             return _zoom;
         }
@@ -41,16 +39,17 @@ class DrawArea : public QWidget
 
     private:
         //member
-        int _zoom;
+        int _zoom = 8;
         std::unique_ptr<Ui::DrawArea> _ui;
         std::unique_ptr<QImage> _image;
         std::unique_ptr<QPen> _pen;
 
         //methods
         void _setImagePixel(const QPoint& pos, bool opaque);
-        QRect _pixelRect(int i, int j) const;
         void _resize();
+        void _drawImageBorder(QPainter& qPainter);
+        QRect _pixelRect(int i, int j) const;
+
 
 };
-
 #endif // DRAWAREA_H
