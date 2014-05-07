@@ -1,5 +1,5 @@
-#ifndef DRAWCONTENTS_H
-#define DRAWCONTENTS_H
+#ifndef DRAWCONTENTS_HPP
+#define DRAWCONTENTS_HPP
 
 #include <memory>
 #include <QWidget>
@@ -14,7 +14,7 @@ class DrawContents : public QWidget
 
     public:
          //ctor and dtor
-        DrawContents(QWidget* parent = nullptr);
+        explicit DrawContents(QWidget* parent = nullptr);
         virtual ~DrawContents();
         void setImage(QImage* image, QColor color = Qt::white);
 
@@ -28,5 +28,4 @@ class DrawContents : public QWidget
         void _onZoomOutButtonClicked();
         void _onZoomInButtonClicked();
 };
-
-#endif
+#endif //DRAWCONTENTS_HPP

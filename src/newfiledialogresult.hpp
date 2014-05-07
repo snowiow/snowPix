@@ -10,7 +10,7 @@ class NewFileDialogResult {
         QPoint size;
         QColor chosenColor;
         explicit NewFileDialogResult();
-        ~NewFileDialogResult();
+        virtual ~NewFileDialogResult();
 };
 
 #endif // NEWFILEDIALOGRESULT_HPP

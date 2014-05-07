@@ -1,6 +1,5 @@
-#ifndef DRAWAREA_H
-#define DRAWAREA_H
-
+#ifndef DRAWAREA_HPP
+#define DRAWAREA_HPP
 #include <memory>
 #include <QWidget>
 #include <QPen>
@@ -19,7 +18,7 @@ class DrawArea : public QWidget
     public:
 
          //ctor and dtor
-        DrawArea(QWidget* parent = nullptr);
+        explicit DrawArea(QWidget* parent = nullptr);
         virtual ~DrawArea();
 
         //methods
@@ -39,7 +38,7 @@ class DrawArea : public QWidget
 
     private:
         //member
-        int _zoom = 8;
+        unsigned short _zoom {8};
         std::unique_ptr<Ui::DrawArea> _ui;
         std::unique_ptr<QImage> _image;
         std::unique_ptr<QPen> _pen;
@@ -49,7 +48,5 @@ class DrawArea : public QWidget
         void _resize();
         void _drawImageBorder(QPainter& qPainter);
         QRect _pixelRect(int i, int j) const;
-
-
 };
-#endif // DRAWAREA_H
+#endif // DRAWAREA_HPP

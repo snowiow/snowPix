@@ -7,7 +7,6 @@ _ui(new Ui::MainWindow) {
     _ui->setupUi(this);
     _createConnects();
 }
-
 MainWindow::~MainWindow() {
 
 }
@@ -35,7 +34,7 @@ void MainWindow::_onNewFileActionClicked() {
     NewFileDialogResult result;
     NewFileDialog dlg(result);
     if (dlg.exec() && dlg.result() == QDialog::Accepted) {
-       _ui->drawContents->setImage(new QImage(result.size.x(),
-                                  result.size.y(), QImage::Format_RGB32), result.chosenColor);
-   }
+        _ui->drawContents->setImage(new QImage(result.size.x(),
+                                    result.size.y(), QImage::Format_RGB32), result.chosenColor);
+    }
 }

@@ -31,7 +31,8 @@ FORMS += src/drawarea.ui \
     src/newfiledialog.ui \
     src/drawcontents.ui
 
-QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CXXFLAGS += -std=c++11\
+            -Wall
 
 RESOURCES += data/data.qrc
 

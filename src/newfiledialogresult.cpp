@@ -1,7 +1,7 @@
 #include "newfiledialogresult.hpp"
 
 NewFileDialogResult::NewFileDialogResult() {
-    size = QPoint(0, 0);
+    size = QPoint(8, 8);
     chosenColor = Qt::white;
 }
 

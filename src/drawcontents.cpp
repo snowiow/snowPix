@@ -2,7 +2,8 @@
 #include "ui_drawcontents.h"
 
 //ctor and dtor
-DrawContents::DrawContents(QWidget *parent) : QWidget(parent), _ui(new Ui::DrawContents) {
+DrawContents::DrawContents(QWidget *parent) : QWidget(parent),
+_ui(new Ui::DrawContents) {
     _ui->setupUi(this);
     _createConnects();
 }
