@@ -16,6 +16,10 @@ void DrawContents::setImage(QImage* image, QColor color) {
     _ui->drawArea->setImage(image, color);
 }
 
+void DrawContents::setPenColor(const QColor& color) {
+    _ui->drawArea->setPenColor(color);
+}
+
 void DrawContents::_createConnects() {
     connect(_ui->zoomOutButton, SIGNAL(clicked()), this,
             SLOT(_onZoomOutButtonClicked()));

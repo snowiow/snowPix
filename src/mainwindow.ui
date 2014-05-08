@@ -34,10 +34,14 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout" stretch="7,1">
     <item>
-     <widget class="DrawContents" name="drawContents" native="true"/>
+     <widget class="DrawContents" name="drawContents" native="true">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="toolLayout" stretch="1,1">
+     <layout class="QVBoxLayout" name="toolLayout" stretch="1,0,1">
       <item>
        <widget class="QWidget" name="drawButtons" native="true">
         <property name="sizePolicy">
@@ -53,13 +57,19 @@
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">border-style:solid;
+border-width:1px;
+border-color:black;
+background-color:white;</string>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="2" column="1">
           <widget class="QPushButton" name="circleButton">
            <property name="autoFillBackground">
             <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color:white;</string>
            </property>
            <property name="text">
             <string/>
@@ -84,6 +94,9 @@
          </item>
          <item row="1" column="1">
           <widget class="QPushButton" name="fillButton">
+           <property name="styleSheet">
+            <string notr="true">border-color:white;</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -112,6 +125,9 @@
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color:white;</string>
            </property>
            <property name="text">
             <string/>
@@ -142,6 +158,9 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="styleSheet">
+            <string notr="true">border-color:white;</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -165,6 +184,9 @@
          </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="lineButton">
+           <property name="styleSheet">
+            <string notr="true">border-color:white;</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -188,6 +210,9 @@
          </item>
          <item row="0" column="0">
           <widget class="QPushButton" name="brushButton">
+           <property name="styleSheet">
+            <string notr="true">border-color:white;</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -219,6 +244,15 @@
         <zorder>fillButton</zorder>
         <zorder>rectButton</zorder>
         <zorder>circleButton</zorder>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="BrushDialog" name="brushDialog"/>
+        <widget class="QWidget" name="page_2"/>
        </widget>
       </item>
       <item>
@@ -416,6 +450,12 @@
    <class>DrawContents</class>
    <extends>QWidget</extends>
    <header>src/drawcontents.hpp</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BrushDialog</class>
+   <extends>QWidget</extends>
+   <header>src/brushdialog.hpp</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

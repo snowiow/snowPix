@@ -2,7 +2,8 @@
 #include "ui_drawarea.h"
 
 //ctor and dtor
-DrawArea::DrawArea(QWidget *parent) : QWidget(parent), _ui(new Ui::DrawArea),  _pen(new QPen(Qt::black, 1, Qt::SolidLine, Qt::SquareCap,Qt::BevelJoin))  {
+DrawArea::DrawArea(QWidget* parent) : QWidget(parent), _ui(new Ui::DrawArea),  _pen(new QPen(Qt::black, 1, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin)),
+    _gutterPen(new QPen(Qt::black, 1, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin))  {
     _ui->setupUi(this);
     setAttribute(Qt::WA_StaticContents);
     setImage(new QImage(16, 16, QImage::Format_RGB32));
@@ -25,6 +26,10 @@ void DrawArea::setZoom(int value) {
     _resize();
 }
 
+void DrawArea::setPenColor(const QColor& color) {
+    _pen->setColor(color);
+}
+
 //protected methods
 void DrawArea::mousePressEvent(QMouseEvent* event) {
     if (event->button() == Qt::LeftButton)
@@ -43,7 +48,7 @@ void DrawArea::mouseMoveEvent(QMouseEvent *event) {
 void DrawArea::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
     if (_zoom >= 3) {
-        painter.setPen(*_pen);
+        painter.setPen(*_gutterPen);
         for (int i = 0; i < _image->width(); i++)
             painter.drawLine(_zoom * i, 0, _zoom * i, _zoom * _image->height());
         for (int i = 0; i < _image->height(); i++)

@@ -18,6 +18,9 @@ class DrawContents : public QWidget
         virtual ~DrawContents();
         void setImage(QImage* image, QColor color = Qt::white);
 
+    public slots:
+        void setPenColor(const QColor& color);
+
     private:
         //member
         std::unique_ptr<Ui::DrawContents> _ui;

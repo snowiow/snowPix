@@ -28,6 +28,9 @@ void MainWindow::_createConnects() {
             SLOT(_onRectButtonClicked()));
     connect(_ui->circleButton, SIGNAL(clicked()), this,
             SLOT(_onCircleButtonClicked()));
+    //Drawtool windows with drawarea
+    connect(_ui->brushDialog, SIGNAL(colorChanged(const QColor&)),
+            _ui->drawContents, SLOT(setPenColor(const QColor&)));
 }
 
 void MainWindow::_onNewFileActionClicked() {

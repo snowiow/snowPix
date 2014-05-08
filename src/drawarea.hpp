@@ -1,5 +1,6 @@
 #ifndef DRAWAREA_HPP
 #define DRAWAREA_HPP
+
 #include <memory>
 #include <QWidget>
 #include <QPen>
@@ -11,12 +12,10 @@ namespace Ui {
     class DrawArea;
 }
 
-class DrawArea : public QWidget
-{
+class DrawArea : public QWidget {
     Q_OBJECT
 
     public:
-
          //ctor and dtor
         explicit DrawArea(QWidget* parent = nullptr);
         virtual ~DrawArea();
@@ -29,6 +28,7 @@ class DrawArea : public QWidget
 
     public slots:
         void setZoom(int value);
+        void setPenColor(const QColor& color);
 
     protected:
         //methods
@@ -42,6 +42,7 @@ class DrawArea : public QWidget
         std::unique_ptr<Ui::DrawArea> _ui;
         std::unique_ptr<QImage> _image;
         std::unique_ptr<QPen> _pen;
+        std::unique_ptr<QPen> _gutterPen;
 
         //methods
         void _setImagePixel(const QPoint& pos, bool opaque);

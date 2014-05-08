@@ -17,19 +17,22 @@ SOURCES += src/drawarea.cpp \
     src/mainwindow.cpp \
     src/newfiledialog.cpp \
     src/newfiledialogresult.cpp \
-    src/drawcontents.cpp
+    src/drawcontents.cpp \
+    src/brushdialog.cpp
 
 HEADERS += \
     src/drawarea.hpp \
     src/mainwindow.hpp \
     src/newfiledialog.hpp \
     src/newfiledialogresult.hpp \
-    src/drawcontents.hpp
+    src/drawcontents.hpp \
+    src/brushdialog.hpp
 
 FORMS += src/drawarea.ui \
     src/mainwindow.ui \
     src/newfiledialog.ui \
-    src/drawcontents.ui
+    src/drawcontents.ui \
+    src/brushdialog.ui
 
 QMAKE_CXXFLAGS += -std=c++11\
             -Wall

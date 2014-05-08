@@ -5,7 +5,6 @@
 #include <QListWidgetItem>
 #include <QColorDialog>
 #include <string>
-#include <vector>
 
 #include "newfiledialogresult.hpp"
 

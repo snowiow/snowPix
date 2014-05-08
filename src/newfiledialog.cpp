@@ -44,6 +44,8 @@ void NewFileDialog::_showElements() {
 }
 
 void NewFileDialog::_onSizeChanged() {
+    #include <string>
+
     const QString text = _ui->sizesList->currentItem()->text();
     if (text == "user defined")
         _showElements();
@@ -70,15 +72,16 @@ void NewFileDialog::_onSizeChanged() {
 
 
 void NewFileDialog::_onColorPickerClicked() {
-    QColor chosenColor = QColorDialog::getColor(Qt::white, this);
-    _result.chosenColor = chosenColor;
-    std::string rgbColor =
-    "background-color: rgb("
+    QColor chosenColor = QColorDialog::getColor(_result.chosenColor, this);
+    if (chosenColor.isValid()) {
+        _result.chosenColor = chosenColor;
+        std::string rgbColor = "background-color: rgb("
                            + std::to_string(chosenColor.red()) + ","
                            + std::to_string(chosenColor.green()) + ","
                            + std::to_string(chosenColor.blue()) + ");";
 
-_ui->colorPickerButton->setStyleSheet(rgbColor.c_str());
+    _ui->colorPickerButton->setStyleSheet(rgbColor.c_str());
+    }
 }
 
 void NewFileDialog::_onWidthSpinBoxClicked(int value) {
