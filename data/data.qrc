@@ -25,5 +25,7 @@
         <file>pics/eraserCursor.png</file>
         <file>pics/Zoom-In.png</file>
         <file>pics/Zoom-Out.png</file>
+        <file>pics/colorPicker.png</file>
+        <file>pics/colorPickerCursor.png</file>
     </qresource>
 </RCC>

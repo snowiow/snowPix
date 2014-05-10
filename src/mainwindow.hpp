@@ -28,29 +28,19 @@ private slots:
     void _onNewFileActionClicked();
 
     //Paintbutton events
-    void _onBrushButtonClicked() {
-        setCursor(QCursor(QPixmap(":pics/brushCursor")));
-    }
+    void _onBrushButtonClicked();
 
-    void _onEraserButtonClicked() {
-        setCursor(QCursor(QPixmap(":pics/eraserCursor")));
-    }
+    void _onEraserButtonClicked();
 
-    void _onFillButtonClicked() {
-        setCursor(QCursor(QPixmap(":pics/fillCursor")));
-    }
+    void _onColorPickerButtonClicked();
 
-    void _onLineButtonClicked() {
-        setCursor(QCursor(QPixmap(":pics/lineCursor")));
-    }
+    void _onFillButtonClicked();
 
-    void _onCircleButtonClicked() {
-        setCursor(QCursor(QPixmap(":pics/lineCursor")));
-    }
+    void _onLineButtonClicked();
 
-    void _onRectButtonClicked() {
-        setCursor(QCursor(QPixmap(":pics/lineCursor")));
-    }
+    void _onCircleButtonClicked();
+
+    void _onRectButtonClicked();
 };
 
 #endif // MAINWINDOW_HPP

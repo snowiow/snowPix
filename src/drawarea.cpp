@@ -4,6 +4,7 @@
 //ctor and dtor
 DrawArea::DrawArea(QWidget* parent) : QWidget(parent), _ui(new Ui::DrawArea),  _pen(new QPen(Qt::black, 1, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin)),
     _gutterPen(new QPen(Qt::black, 1, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin))  {
+
     _ui->setupUi(this);
     setAttribute(Qt::WA_StaticContents);
     setImage(new QImage(16, 16, QImage::Format_RGB32));
@@ -14,10 +15,11 @@ DrawArea::~DrawArea() {
 }
 
 //public methods
-void DrawArea::setImage(QImage* image, QColor color) {
+void DrawArea::setImage(QImage* image, const QColor& color) {
     _image.reset(image);
     _resize();
     _image->fill(color);
+    _backgroundColor = color;
 }
 
 //public slots
@@ -30,19 +32,18 @@ void DrawArea::setPenColor(const QColor& color) {
     _pen->setColor(color);
 }
 
+void DrawArea::setIsEraser(bool value) {
+    _isEraser = value;
+}
 //protected methods
 void DrawArea::mousePressEvent(QMouseEvent* event) {
     if (event->button() == Qt::LeftButton)
-        _setImagePixel(event->pos(), true);
-    else if (event->button() == Qt::RightButton)
-        _setImagePixel(event->pos(), false);
+        _setImagePixel(event->pos());
 }
 
 void DrawArea::mouseMoveEvent(QMouseEvent *event) {
     if (event->buttons() & Qt::LeftButton)
-        _setImagePixel(event->pos(), true);
-    else if (event->buttons() & Qt::RightButton)
-        _setImagePixel(event->pos(), false);
+        _setImagePixel(event->pos());
 }
 
 void DrawArea::paintEvent(QPaintEvent *event) {
@@ -65,14 +66,14 @@ void DrawArea::paintEvent(QPaintEvent *event) {
 }
 
 //private methods
-void DrawArea::_setImagePixel(const QPoint& pos, bool opaque) {
+void DrawArea::_setImagePixel(const QPoint& pos) {
     int i = pos.x() / _zoom;
     int j = pos.y() / _zoom;
     if (_image->rect().contains(i, j)) {
-        if (opaque)
-            _image->setPixel(i, j, _pen->color().rgb());
+        if (_isEraser)
+            _image->setPixel(i, j, _backgroundColor.rgb());
         else
-            _image->setPixel(i, j, Qt::white);
+            _image->setPixel(i, j, _pen->color().rgb());
         update(_pixelRect(i, j));
     }
 }

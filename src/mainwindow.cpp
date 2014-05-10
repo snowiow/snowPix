@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
 _ui(new Ui::MainWindow) {
     _ui->setupUi(this);
     _createConnects();
+    _onBrushButtonClicked();
 }
 MainWindow::~MainWindow() {
 
@@ -22,6 +23,8 @@ void MainWindow::_createConnects() {
             SLOT(_onEraserButtonClicked()));
     connect(_ui->fillButton, SIGNAL(clicked()), this,
             SLOT(_onFillButtonClicked()));
+    connect(_ui->colorPickerButton, SIGNAL(clicked()), this,
+            SLOT(_onColorPickerButtonClicked()));
     connect(_ui->lineButton, SIGNAL(clicked()), this,
             SLOT(_onLineButtonClicked()));
     connect(_ui->rectButton, SIGNAL(clicked()), this,
@@ -40,4 +43,39 @@ void MainWindow::_onNewFileActionClicked() {
         _ui->drawContents->setImage(new QImage(result.size.x(),
                                     result.size.y(), QImage::Format_RGB32), result.chosenColor);
     }
+}
+
+void MainWindow::_onBrushButtonClicked() {
+    setCursor(QCursor(QPixmap(":pics/brushCursor")));
+    _ui->drawContents->setIsEraser(false);
+}
+
+void MainWindow::_onEraserButtonClicked() {
+    setCursor(QCursor(QPixmap(":pics/eraserCursor")));
+    _ui->drawContents->setIsEraser(true);
+}
+
+void MainWindow::_onColorPickerButtonClicked() {
+    setCursor(QCursor(QPixmap(":pics/colorPickerCursor")));
+    _ui->drawContents->setIsEraser(false);
+}
+
+void MainWindow::_onFillButtonClicked() {
+    setCursor(QCursor(QPixmap(":pics/fillCursor")));
+    _ui->drawContents->setIsEraser(false);
+}
+
+void MainWindow::_onLineButtonClicked() {
+    setCursor(QCursor(QPixmap(":pics/lineCursor")));
+    _ui->drawContents->setIsEraser(false);
+}
+
+void MainWindow::_onCircleButtonClicked() {
+    setCursor(QCursor(QPixmap(":pics/lineCursor")));
+    _ui->drawContents->setIsEraser(false);
+}
+
+void MainWindow::_onRectButtonClicked() {
+    setCursor(QCursor(QPixmap(":pics/lineCursor")));
+    _ui->drawContents->setIsEraser(false);
 }

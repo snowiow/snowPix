@@ -24,7 +24,9 @@ border-color:black;</string>
      <item>
       <widget class="QLabel" name="label">
        <property name="styleSheet">
-        <string notr="true">background-color:white;</string>
+        <string notr="true">border-color:rgb(148,153,255);
+border-width:1px;
+border-style:solid;</string>
        </property>
        <property name="text">
         <string>Pen Color:</string>
@@ -34,7 +36,10 @@ border-color:black;</string>
      <item>
       <widget class="QPushButton" name="colorPickerButton">
        <property name="styleSheet">
-        <string notr="true">background-color:black</string>
+        <string notr="true">background-color:black;
+border-color:rgb(148,153,255);
+border-width:1px;
+border-style:solid;</string>
        </property>
        <property name="text">
         <string/>

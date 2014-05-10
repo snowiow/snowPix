@@ -34,6 +34,11 @@
        <height>10</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">border-color:rgb(148,153,255);
+border-width:2px;
+border-style:solid;</string>
+     </property>
      <property name="widgetResizable">
       <bool>false</bool>
      </property>

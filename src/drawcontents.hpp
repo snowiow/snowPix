@@ -20,6 +20,7 @@ class DrawContents : public QWidget
 
     public slots:
         void setPenColor(const QColor& color);
+        void setIsEraser(bool value);
 
     private:
         //member

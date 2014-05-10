@@ -21,7 +21,7 @@ class DrawArea : public QWidget {
         virtual ~DrawArea();
 
         //methods
-        void setImage(QImage* image, QColor color = Qt::white);
+        void setImage(QImage* image, const QColor& color = Qt::white);
         int getZoom() const {
             return _zoom;
         }
@@ -29,6 +29,7 @@ class DrawArea : public QWidget {
     public slots:
         void setZoom(int value);
         void setPenColor(const QColor& color);
+        void setIsEraser(bool value);
 
     protected:
         //methods
@@ -39,13 +40,15 @@ class DrawArea : public QWidget {
     private:
         //member
         unsigned short _zoom {8};
+        bool _isEraser = false;
         std::unique_ptr<Ui::DrawArea> _ui;
         std::unique_ptr<QImage> _image;
         std::unique_ptr<QPen> _pen;
         std::unique_ptr<QPen> _gutterPen;
+        QColor _backgroundColor;
 
         //methods
-        void _setImagePixel(const QPoint& pos, bool opaque);
+        void _setImagePixel(const QPoint& pos);
         void _resize();
         void _drawImageBorder(QPainter& qPainter);
         QRect _pixelRect(int i, int j) const;

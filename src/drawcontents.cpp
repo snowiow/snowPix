@@ -20,6 +20,10 @@ void DrawContents::setPenColor(const QColor& color) {
     _ui->drawArea->setPenColor(color);
 }
 
+void DrawContents::setIsEraser(bool value) {
+    _ui->drawArea->setIsEraser(value);
+}
+
 void DrawContents::_createConnects() {
     connect(_ui->zoomOutButton, SIGNAL(clicked()), this,
             SLOT(_onZoomOutButtonClicked()));

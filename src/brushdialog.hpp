@@ -21,7 +21,7 @@ class BrushDialog : public QWidget {
         QColor _currentColor;
 
         void _createConnects();
-        void _setCurrentColor(QColor color);
+        void _setCurrentColor(QColor& color);
 
     signals:
         void colorChanged(const QColor& color);

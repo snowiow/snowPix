@@ -16,7 +16,7 @@ void BrushDialog::_createConnects() {
             SLOT(_onColorPickerClicked()));
 }
 
-void BrushDialog::_setCurrentColor(QColor color) {
+void BrushDialog::_setCurrentColor(QColor& color) {
     _currentColor = color;
     emit colorChanged(_currentColor);
 }
