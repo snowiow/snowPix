@@ -20,8 +20,12 @@ void DrawContents::setPenColor(const QColor& color) {
     _ui->drawArea->setPenColor(color);
 }
 
-void DrawContents::setIsEraser(bool value) {
-    _ui->drawArea->setIsEraser(value);
+void DrawContents::setCurrentTool(DrawArea::DrawTool tool) {
+    _ui->drawArea->setCurrentTool(tool);
+}
+
+void DrawContents::changeColor(const QColor& color) {
+    emit colorChanged(color);
 }
 
 void DrawContents::_createConnects() {
@@ -31,8 +35,9 @@ void DrawContents::_createConnects() {
             SLOT(_onZoomInButtonClicked()));
     connect(_ui->spinBox, SIGNAL(valueChanged(int)), _ui->drawArea,
             SLOT(setZoom(int)));
+    connect(_ui->drawArea, SIGNAL(colorChanged(const QColor&)),
+            this, SLOT(changeColor(const QColor&)));
 }
-
 
 void DrawContents::_onZoomOutButtonClicked() {
     _ui->spinBox->setValue(_ui->spinBox->value() - 1);

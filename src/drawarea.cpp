@@ -32,9 +32,10 @@ void DrawArea::setPenColor(const QColor& color) {
     _pen->setColor(color);
 }
 
-void DrawArea::setIsEraser(bool value) {
-    _isEraser = value;
+void DrawArea::setCurrentTool(DrawTool tool) {
+    _currentTool = tool;
 }
+
 //protected methods
 void DrawArea::mousePressEvent(QMouseEvent* event) {
     if (event->button() == Qt::LeftButton)
@@ -70,10 +71,14 @@ void DrawArea::_setImagePixel(const QPoint& pos) {
     int i = pos.x() / _zoom;
     int j = pos.y() / _zoom;
     if (_image->rect().contains(i, j)) {
-        if (_isEraser)
-            _image->setPixel(i, j, _backgroundColor.rgb());
-        else
+        if (_currentTool == DrawTool::Brush)
             _image->setPixel(i, j, _pen->color().rgb());
+        else if (_currentTool == DrawTool::Eraser)
+            _image->setPixel(i, j, _backgroundColor.rgb());
+        else if (_currentTool == DrawTool::ColorPicker) {
+            setPenColor(QColor(_image->pixel(i, j)));
+            emit colorChanged(_pen->color());
+        }
         update(_pixelRect(i, j));
     }
 }

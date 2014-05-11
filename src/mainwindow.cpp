@@ -34,6 +34,8 @@ void MainWindow::_createConnects() {
     //Drawtool windows with drawarea
     connect(_ui->brushDialog, SIGNAL(colorChanged(const QColor&)),
             _ui->drawContents, SLOT(setPenColor(const QColor&)));
+    connect(_ui->drawContents, SIGNAL(colorChanged(const QColor&)),
+            _ui->brushDialog, SLOT(setColorButtonColor(const QColor&)));
 }
 
 void MainWindow::_onNewFileActionClicked() {
@@ -47,35 +49,35 @@ void MainWindow::_onNewFileActionClicked() {
 
 void MainWindow::_onBrushButtonClicked() {
     setCursor(QCursor(QPixmap(":pics/brushCursor")));
-    _ui->drawContents->setIsEraser(false);
+    _ui->drawContents->setCurrentTool(DrawArea::DrawTool::Brush);
 }
 
 void MainWindow::_onEraserButtonClicked() {
     setCursor(QCursor(QPixmap(":pics/eraserCursor")));
-    _ui->drawContents->setIsEraser(true);
+    _ui->drawContents->setCurrentTool(DrawArea::DrawTool::Eraser);
 }
 
 void MainWindow::_onColorPickerButtonClicked() {
     setCursor(QCursor(QPixmap(":pics/colorPickerCursor")));
-    _ui->drawContents->setIsEraser(false);
+    _ui->drawContents->setCurrentTool(DrawArea::DrawTool::ColorPicker);
 }
 
 void MainWindow::_onFillButtonClicked() {
     setCursor(QCursor(QPixmap(":pics/fillCursor")));
-    _ui->drawContents->setIsEraser(false);
+    _ui->drawContents->setCurrentTool(DrawArea::DrawTool::Fill);
 }
 
 void MainWindow::_onLineButtonClicked() {
     setCursor(QCursor(QPixmap(":pics/lineCursor")));
-    _ui->drawContents->setIsEraser(false);
+    _ui->drawContents->setCurrentTool(DrawArea::DrawTool::Line);
 }
 
 void MainWindow::_onCircleButtonClicked() {
     setCursor(QCursor(QPixmap(":pics/lineCursor")));
-    _ui->drawContents->setIsEraser(false);
+    _ui->drawContents->setCurrentTool(DrawArea::DrawTool::Circle);
 }
 
 void MainWindow::_onRectButtonClicked() {
     setCursor(QCursor(QPixmap(":pics/lineCursor")));
-    _ui->drawContents->setIsEraser(false);
+    _ui->drawContents->setCurrentTool(DrawArea::DrawTool::Rect);
 }

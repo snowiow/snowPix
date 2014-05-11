@@ -6,6 +6,7 @@
 
 #include "newfiledialogresult.hpp"
 #include "drawcontents.hpp"
+#include "drawarea.hpp"
 
 namespace Ui {
 class MainWindow;

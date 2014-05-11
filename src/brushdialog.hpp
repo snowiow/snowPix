@@ -16,6 +16,9 @@ class BrushDialog : public QWidget {
         explicit BrushDialog(QWidget* parent = nullptr);
         virtual ~BrushDialog();
 
+    public slots:
+        void setColorButtonColor(const QColor& color);
+
     private:
         std::unique_ptr<Ui::BrushDialog> _ui;
         QColor _currentColor;
@@ -28,6 +31,7 @@ class BrushDialog : public QWidget {
 
     private slots:
         void _onColorPickerClicked();
+
 
 };
 #endif //BRUSHDIALOG_HPP

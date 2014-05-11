@@ -25,12 +25,16 @@ void BrushDialog::_onColorPickerClicked() {
     QColor chosenColor = QColorDialog::getColor(_currentColor, this);
 
     if (chosenColor.isValid()) {
-        std::string rgbColor = "background-color: rgb("
-                           + std::to_string(chosenColor.red()) + ","
-                           + std::to_string(chosenColor.green()) + ","
-                           + std::to_string(chosenColor.blue()) + ");";
-
-        _ui->colorPickerButton->setStyleSheet(rgbColor.c_str());
+        setColorButtonColor(chosenColor);
         _setCurrentColor(chosenColor);
     }
+}
+
+void BrushDialog::setColorButtonColor(const QColor& color) {
+    std::string rgbColor = "background-color: rgb("
+                           + std::to_string(color.red()) + ","
+                           + std::to_string(color.green()) + ","
+                           + std::to_string(color.blue()) + ");";
+
+    _ui->colorPickerButton->setStyleSheet(rgbColor.c_str());
 }

@@ -4,6 +4,8 @@
 #include <memory>
 #include <QWidget>
 
+#include "drawarea.hpp"
+
 namespace Ui {
     class DrawContents;
 }
@@ -16,11 +18,16 @@ class DrawContents : public QWidget
          //ctor and dtor
         explicit DrawContents(QWidget* parent = nullptr);
         virtual ~DrawContents();
+        const Ui::DrawContents* getUi() const;
         void setImage(QImage* image, QColor color = Qt::white);
 
     public slots:
         void setPenColor(const QColor& color);
-        void setIsEraser(bool value);
+        void setCurrentTool(DrawArea::DrawTool value);
+        void changeColor(const QColor& color);
+
+    signals:
+        void colorChanged(const QColor& color);
 
     private:
         //member

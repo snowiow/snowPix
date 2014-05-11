@@ -16,7 +16,16 @@ class DrawArea : public QWidget {
     Q_OBJECT
 
     public:
-         //ctor and dtor
+        enum class DrawTool {
+            Brush,
+            Eraser,
+            ColorPicker,
+            Fill,
+            Line,
+            Rect,
+            Circle
+        };
+
         explicit DrawArea(QWidget* parent = nullptr);
         virtual ~DrawArea();
 
@@ -29,7 +38,10 @@ class DrawArea : public QWidget {
     public slots:
         void setZoom(int value);
         void setPenColor(const QColor& color);
-        void setIsEraser(bool value);
+        void setCurrentTool(DrawTool tool);
+
+    signals:
+        void colorChanged(const QColor& color);
 
     protected:
         //methods
@@ -40,7 +52,7 @@ class DrawArea : public QWidget {
     private:
         //member
         unsigned short _zoom {8};
-        bool _isEraser = false;
+        DrawTool _currentTool = DrawTool::Brush;
         std::unique_ptr<Ui::DrawArea> _ui;
         std::unique_ptr<QImage> _image;
         std::unique_ptr<QPen> _pen;
