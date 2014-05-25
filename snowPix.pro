@@ -35,7 +35,7 @@ FORMS += src/drawarea.ui \
     src/brushdialog.ui
 
 QMAKE_CXXFLAGS += -std=c++11\
-            -Wall
+                  -Wall\
 
 RESOURCES += data/data.qrc
 

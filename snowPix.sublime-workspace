@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"color",
+				"color"
+			],
+			[
+				"setP",
+				"setPixel"
+			],
+			[
+				"Draw",
+				"DrawArea"
+			],
+			[
+				"Dra",
+				"DrawTool::Brush"
+			],
+			[
+				"setColo",
+				"setColorButtonColor"
+			],
+			[
+				"draw",
+				"drawarea"
+			],
+			[
+				"setC",
+				"setCurrentTool"
+			],
+			[
+				"_current",
+				"_currentTool"
+			],
+			[
+				"dr",
+				"drawArea"
+			],
+			[
+				"bo",
+				"bool"
+			],
+			[
+				"_onColor",
+				"_onColorPickerButtonClicked"
+			],
+			[
 				"S",
 				"SolidLine"
 			],
@@ -14,18 +58,6 @@
 			[
 				"setPe",
 				"setPenColor"
-			],
-			[
-				"Draw",
-				"DrawContents"
-			],
-			[
-				"draw",
-				"drawcontents"
-			],
-			[
-				"color",
-				"colorChanged"
 			],
 			[
 				"Q",
@@ -107,32 +139,28 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/drawarea.cpp",
-			"settings":
-			{
-				"buffer_size": 3280,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/drawarea.hpp",
-			"settings":
-			{
-				"buffer_size": 1248,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "QtDebug",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 173.0,
 		"selected_items":
 		[
 			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
 				"user",
-				"Preferences: Settings - User"
+				"Preferences: Key Bindings - User"
 			],
 			[
 				"sett",
@@ -143,19 +171,11 @@
 				"Preferences: Key Bindings - Default"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"install",
 				"Package Control: Install Package"
 			],
 			[
 				"remo",
-				"Package Control: Remove Package"
-			],
-			[
-				"rem",
 				"Package Control: Remove Package"
 			],
 			[
@@ -220,34 +240,42 @@
 	},
 	"file_history":
 	[
-		"/home/marcel/workspace/snowPix/src/drawarea.hpp",
 		"/home/marcel/workspace/snowPix/src/drawarea.cpp",
+		"/home/marcel/workspace/snowPix/snowPix.pro",
+		"/home/marcel/.config/sublime-text-3/Packages/User/SublimeGDB.sublime-settings",
+		"/home/marcel/workspace/snowPix/src/mainwindow.cpp",
+		"/home/marcel/workspace/snowPix/src/brushdialog.cpp",
+		"/home/marcel/workspace/snowPix/src/drawarea.hpp",
+		"/home/marcel/workspace/snowPix/snowPix.sublime-project",
+		"/home/marcel/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/home/marcel/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/marcel/.config/sublime-text-3/Packages/User/Build/c/snowEditDLL-Debug.sublime-build",
+		"/home/marcel/.config/sublime-text-3/Packages/SideBarEnhancements/Default (Linux).sublime-keymap",
+		"/home/marcel/workspace/kolloquium/beispiel.rs",
+		"/home/marcel/workspace/snowPix/src/mainwindow.hpp",
+		"/home/marcel/workspace/snowPix/src/drawarea.ui",
 		"/home/marcel/workspace/snowPix/src/drawcontents.cpp",
 		"/home/marcel/workspace/snowPix/src/drawcontents.hpp",
+		"/home/marcel/workspace/expose1/ExposeeBA.tex",
+		"/home/marcel/workspace/expose1/4/implementierung.tex",
+		"/home/marcel/workspace/snowPix/src/brushdialog.hpp",
+		"/home/marcel/workspace/snowPix/data/data.qrc",
+		"/home/marcel/workspace/snowPix/src/drawtool.hpp",
+		"/home/marcel/workspace/snowPix/src/newfiledialog.ui",
 		"/home/marcel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/marcel/workspace/snowPix/src/brushdialog.ui",
-		"/home/marcel/workspace/snowPix/snowPix.pro",
 		"/home/marcel/workspace/snowPix/src/newfiledialog.cpp",
-		"/home/marcel/workspace/snowPix/src/brushdialog.cpp",
-		"/home/marcel/workspace/snowPix/src/brushdialog.hpp",
-		"/home/marcel/workspace/snowPix/src/mainwindow.cpp",
-		"/home/marcel/workspace/snowPix/src/drawarea.ui",
 		"/home/marcel/workspace/snowPix/snowPix.pro.user",
-		"/home/marcel/workspace/snowPix/snowPix.sublime-project",
 		"/home/marcel/workspace/snowPix/src/newfiledialog.hpp",
 		"/home/marcel/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/marcel/workspace/snowPix/src/mainwindow.hpp",
 		"/home/marcel/workspace/snowPix/src/newfiledialogresult.hpp",
-		"/home/marcel/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/marcel/workspace/snowPix/src/newfiledialogresult.cpp",
-		"/home/marcel/workspace/snowPix/src/newfiledialog.ui",
 		"/home/marcel/workspace/snowPix/src/main.cpp",
 		"/home/marcel/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/usr/include/qt/QtWidgets/qdialog.h",
 		"/usr/include/qt/QtGui/QWidgetList",
 		"/home/marcel/.config/sublime-text-3/Packages/User/Build/c++/qt.sublime-build",
 		"/home/marcel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/marcel/workspace/snowPix/data/data.qrc",
 		"/home/marcel/.config/sublime-text-3/Packages/User/ClangComplete.sublime-settings",
 		"/home/marcel/workspace/snowPix/src/zoomwidget.ui",
 		"/home/marcel/workspace/snowPix/src/zoomwidget.cpp",
@@ -286,7 +314,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -301,6 +329,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"drawtool",
 			"ctrl+w",
 			"closectrl+w",
 			"close",
@@ -349,75 +378,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/drawarea.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3280,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								307,
-								307
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/drawarea.hpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								947,
-								947
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 415.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 37.0
 	},
 	"input":
 	{
@@ -461,7 +429,7 @@
 	"project": "snowPix.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -470,20 +438,40 @@
 		"selected_items":
 		[
 			[
-				"draw",
-				"src/drawarea.cpp"
-			],
-			[
 				"main",
 				"src/mainwindow.cpp"
+			],
+			[
+				"draw",
+				"src/drawarea.hpp"
 			],
 			[
 				"dra",
 				"src/drawarea.hpp"
 			],
 			[
+				"mainw",
+				"src/mainwindow.hpp"
+			],
+			[
 				"dr",
-				"src/drawcontents.cpp"
+				"src/drawarea.cpp"
+			],
+			[
+				"ma",
+				"src/mainwindow.cpp"
+			],
+			[
+				"da",
+				"data/data.qrc"
+			],
+			[
+				"mai",
+				"src/mainwindow.cpp"
+			],
+			[
+				"dat",
+				"data/data.qrc"
 			],
 			[
 				"brush",
@@ -510,14 +498,6 @@
 				"src/drawcontents.cpp"
 			],
 			[
-				"mai",
-				"src/mainwindow.cpp"
-			],
-			[
-				"mainw",
-				"src/mainwindow.cpp"
-			],
-			[
 				"newfil",
 				"src/newfiledialog.cpp"
 			],
@@ -531,10 +511,6 @@
 			],
 			[
 				"maon",
-				"src/mainwindow.cpp"
-			],
-			[
-				"ma",
 				"src/mainwindow.cpp"
 			],
 			[

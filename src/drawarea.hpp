@@ -63,6 +63,7 @@ class DrawArea : public QWidget {
         void _setImagePixel(const QPoint& pos);
         void _resize();
         void _drawImageBorder(QPainter& qPainter);
-        QRect _pixelRect(int i, int j) const;
+        QRect _pixelRect(int x, int y) const;
+        void _fill(int x, int y, const QRgb& initialColor);
 };
 #endif // DRAWAREA_HPP
